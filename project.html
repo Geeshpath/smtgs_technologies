@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+<!-- AOS for scroll animations -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* ===== Custom Styles ===== */
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #333;
+    }
+  .project-card .p-4 {
+  flex-grow: 1; /* ensures footer/buttons stay at bottom */
+}
+    .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* optional spacing */
+}
+/* Prevent horizontal overflow */
+body, html {
+    overflow-x: hidden;
+}
+
+/* Ensure images don’t exceed their container */
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optional: make the project cards consistent */
+.row.g-4 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+     .dark-mode {
+            --text-dark: #f9fafb;
+            --text-light: #d1d5db;
+            --light-bg: #111827;
+            background-color: var(--dark-bg);
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .navbar {
+            background-color: rgba(31, 41, 55, 0.95);
+        }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+       height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .project-image {
+      font-size: 3rem;
+      text-align: center;
+      padding: 2rem 0 1rem;
+      color: #0d6efd; /* Bootstrap primary */
+    }
+
+    .project-image img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background-color: #e9ecef;
+      color: #495057;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-card .btn {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
+        <img src="smtg.jpg" alt="SMTGS Logo" height="40" class="me-2">
+        SMTGS TECHNOLOGIES
+    </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="project.html">Projects</a></li>
+
+                    <a class="nav-link" href="service.html">Services</a></li>
+                    <a class="nav-link" href="about.html">About</a></li>
+                   <a class="nav-link" href="contact.html">Contact</a></li> 
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+ <section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Projects</h2>
+    <div class="row g-4"> 
+<!-- Project Card -->
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="project-card" data-aos="fade-up" data-aos-delay="300" 
+       data-bs-toggle="modal" data-bs-target="#iotSmartHomeModal" style="cursor:pointer;">
+    <div class="project-image">
+      <img src="assets/smart_home.jpg" alt="IoT Smart Home" class="img-fluid rounded">
+    </div>
+    <div class="p-4">
+      <h5 class="mb-3">IoT Smart Home</h5>
+      <p class="text-muted mb-3">IoT-based home automation system with real-time monitoring</p>
+      <div class="mb-3">
+        <span class="tech-badge">Arduino</span>
+        <span class="tech-badge">NodeMCU</span>
+        <span class="tech-badge">Firebase</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="iotSmartHomeModal" tabindex="-1" aria-labelledby="iotSmartHomeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="iotSmartHomeLabel">IoT Smart Home</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>IoT-based home automation system that allows users to control lights, fans, and appliances remotely. Real-time monitoring with NodeMCU and Firebase integration.</p>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <img src="assets/img/iot1.jpg" class="img-fluid rounded" alt="IoT Image 1">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="assets/img/iot2.jpg" class="img-fluid rounded" alt="IoT Image 2">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="assets/img/iot3.jpg" class="img-fluid rounded" alt="IoT Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Fire Fighting Robot -->
+      <!-- Fire Fighting Robot Project Card -->
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="project-card" data-aos="fade-up" data-aos-delay="400" 
+       data-bs-toggle="modal" data-bs-target="#fireRobotModal" style="cursor:pointer;">
+    <div class="project-image">
+      <img src="assets/fire_robot.jpg" alt="Fire Fighting Robot" class="img-fluid rounded">
+    </div>
+    <div class="p-4">
+      <h5 class="mb-3">Fire Fighting Robot</h5>
+      <p class="text-muted mb-3">Autonomous robot capable of detecting and extinguishing fire.</p>
+      <div class="mb-3">
+        <span class="tech-badge">Arduino</span>
+        <span class="tech-badge">Sensors</span>
+        <span class="tech-badge">Motors</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fire Fighting Robot Modal -->
+<div class="modal fade" id="fireRobotModal" tabindex="-1" aria-labelledby="fireRobotLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fireRobotLabel">Fire Fighting Robot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This autonomous robot is designed to detect flames using sensors and extinguish fires efficiently. It can navigate obstacles and reach fire sources automatically.</p>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <img src="assets/fire_fighting_jpg" class="img-fluid rounded" alt="Fire Robot Image 1">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="assets/img/fire2.jpg" class="img-fluid rounded" alt="Fire Robot Image 2">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="assets/img/fire3.jpg" class="img-fluid rounded" alt="Fire Robot Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Soil Moisture Rover -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-image">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Soil Moisture Rover</h5>
+            <p class="text-muted mb-3">Rover to monitor soil moisture and assist in precision farming.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Arduino</span>
+              <span class="tech-badge">Sensors</span>
+              <span class="tech-badge">IoT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Axis Solar Tracking -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-image">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Dual Axis Solar Tracking System</h5>
+            <p class="text-muted mb-3">Maximizes solar panel efficiency using dual-axis tracking.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Arduino</span>
+              <span class="tech-badge">Solar</span>
+              <span class="tech-badge">Motors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Axis Solar Tracking -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="project-image">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Single Axis Solar Tracking</h5>
+            <p class="text-muted mb-3">Simplified solar tracking system with single axis movement.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Arduino</span>
+              <span class="tech-badge">Solar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wireless Charging -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+          <div class="project-image">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Wireless Charging</h5>
+            <p class="text-muted mb-3">Wireless power transfer system for electronic devices.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Coils</span>
+              <span class="tech-badge">Electronics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rover for Vining Plants -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+          <div class="project-image">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Rover for Vining Plants</h5>
+            <p class="text-muted mb-3">Rover designed to support the growth of vining plants.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Robotics</span>
+              <span class="tech-badge">IoT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MATLAB Simulation -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="1000">
+          <div class="project-image">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">MATLAB Simulation</h5>
+            <p class="text-muted mb-3">Simulation of engineering problems using MATLAB.</p>
+            <div class="mb-3">
+              <span class="tech-badge">MATLAB</span>
+              <span class="tech-badge">Simulation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PCB Designing -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="1100">
+          <div class="project-image">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">PCB Designing</h5>
+            <p class="text-muted mb-3">Designing printed circuit boards for electronics projects.</p>
+            <div class="mb-3">
+              <span class="tech-badge">Eagle</span>
+              <span class="tech-badge">KiCad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Stock Price Prediction System</h5>
+            <p class="text-muted mb-3">ML model predicting stock prices with 85% accuracy using LSTM networks</p>
+            <div class="mb-3">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">Pandas</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">E-commerce Web App</h5>
+            <p class="text-muted mb-3">Full-stack e-commerce platform with payment integration and admin panel</p>
+            <div class="mb-3">
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">Stripe</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Disease Prediction System</h5>
+            <p class="text-muted mb-3">ML-based health diagnosis system using symptoms analysis</p>
+            <div class="mb-3">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Scikit-learn</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">HTML/CSS</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div class="row">
+
+  <!-- Smart Irrigation System -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="project-card text-center p-4" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-water fa-4x mb-3 text-primary"></i>
+      <h5 class="mb-3">Smart Irrigation System</h5>
+      <p class="text-muted mb-3">Automated irrigation using soil moisture sensors and ESP32</p>
+      <div class="mb-3">
+        <span class="tech-badge">ESP32</span>
+        <span class="tech-badge">Sensors</span>
+        <span class="tech-badge">IoT</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-sm btn-outline-primary">Project Pics</a>
+        <a href="#" class="btn btn-sm btn-primary">View Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weather Monitoring System -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="project-card text-center p-4" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-cloud-sun fa-4x mb-3 text-info"></i>
+      <h5 class="mb-3">Weather Monitoring System</h5>
+      <p class="text-muted mb-3">IoT-enabled system for tracking temperature, humidity, and pressure</p>
+      <div class="mb-3">
+        <span class="tech-badge">ESP8266</span>
+        <span class="tech-badge">DHT22</span>
+        <span class="tech-badge">Blynk</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-sm btn-outline-primary">Project Pics</a>
+        <a href="#" class="btn btn-sm btn-primary">View Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Autonomous Drone -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="project-card text-center p-4" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-drone fa-4x mb-3 text-danger"></i>
+      <h5 class="mb-3">Autonomous Drone</h5>
+      <p class="text-muted mb-3">Drone for surveillance and delivery with Pixhawk and GPS</p>
+      <div class="mb-3">
+        <span class="tech-badge">Pixhawk</span>
+        <span class="tech-badge">GPS</span>
+        <span class="tech-badge">LoRa</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-sm btn-outline-primary">Project Pics</a>
+        <a href="#" class="btn btn-sm btn-primary">View Code</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+      <!-- Project 7 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Automated Trading Bot</h5>
+            <p class="text-muted mb-3">Cryptocurrency trading bot with real-time market analysis</p>
+            <div class="mb-3">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">APIs</span>
+              <span class="tech-badge">WebSocket</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-image">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-3">Student Management System</h5>
+            <p class="text-muted mb-3">Complete academic management system for colleges and universities</p>
+            <div class="mb-3">
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">Charts.js</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.row -->
+  </div>
+</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
